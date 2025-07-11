@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anant's Portfolio</title>
+  <style>
+    body {
+      background-color: black;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    #navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 40px;
+      position: relative;
+    }
+
+    /* ICON on left */
+    #icon {
+      width: 80px;
+      height: 80px;
+    }
+
+    /* CENTER NAME ABSOLUTELY */
+    #name {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Times New Roman', Times, serif;
+      color: aqua;
+      font-size: 26px;
+      margin: 0;
+    }
+        h2 {
+      color: white;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #slider-container {
+      overflow: hidden;
+      width: 100%;
+      height: 250px;
+      margin-top: 40px;
+      position: relative;
+    }
+
+    .slider-track {
+      display: flex;
+      width: calc(250px * 12); /* total width = one image * total images */
+      animation: scrollLeft 20s linear infinite;
+    }
+
+    .slider-track img {
+      width: 250px;
+      height: auto;
+      margin-right: 20px;
+      border-radius: 8px;
+    }
+
+    /* NAV LINKS on right */
+    .linksnav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 18px;
+    }
+
+    .linksnav a:hover {
+      color: aqua;
+    }
+    #main {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: slideShow 9s ease-in-out infinite;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@keyframes slideShow {
+  0% {
+    background-image: url('pic 1.jpg');
+  }
+  33% {
+    background-image: url('pic 2.webp');
+  }
+  
+  100% {
+    background-image: url('pic 1.jpg');
+  }
+}
+
+    #greet{
+        text-align: center;
+        position: relative;
+        color:rgb(205, 217, 208);
+      z-index: 6;
+    }
+
+  #hobby {
+  color:rgb(29, 25, 3);
+  font-size: 24px;
+  text-align: center;
+  margin-top: 10px;
+}
+#button{
+  background-color: azure;
+  border: 5px solid black;
+} 
+ @keyframes scrollLeft {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .slider-track img {
+        width: 180px;
+        margin-right: 10px;
+      }
+    }
+/* for mobile reponsiveness */
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  #name {
+    position: static;
+    transform: none;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .linksnav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .linksnav a {
+    margin: 8px 12px;
+    font-size: 16px;
+  }
+
+  #icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+
+  #main {
+    height: 400px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  #greet {
+    font-size: 22px;
+    padding: 0 10px;
+    
+  }
+
+  #hobby {
+    font-size: 20px;
+    
+  }
+
+  #contact div {
+    flex-direction: column;
+    gap: 15px;
+    font-size: 18px;
+    padding: 0 20px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <header id="navbar">
+    <!-- Left: Icon -->
+    <img src="Anant's Portfolio Logo Design.png" alt="icon" id="icon">
+
+    <!-- Center: Name -->
+    <h2 id="name">ANANT's PORTFOLIO</h2>
+
+    <!-- Right: Nav Links -->
+    <nav class="linksnav">
+      <a href="About.html">About</a>
+      <a href="Projects.html">Projects</a>
+     
+      <a href="resume.pdf"download>Resume</a>
+    </nav>
+  </header>
+
+  <main>
+    <div id="main">
+      <div style="text-align: center;">
+        <h1 id="greet">Hi, I Am Anant Anand 👋</h1>
+        <h2 id="hobby"><span class="text" >web developer</span> </h2></div>
+         
+         </div>
+    
+    
+    
+    </div>
+     <h2>My Skills</h2>
+
+  <div id="slider-container">
+    <div class="slider-track">
+      <!-- Repeat images for infinite effect -->
+      <img src="html.jpg" alt="HTML" />
+      <img src="css.jpg" alt="CSS" />
+      <img src="tailwind.png" alt="Tailwind" />
+      <img src="javas.jpg" alt="JavaScript" />
+      <img src="react.jpg" alt="React" />
+      <img src="next.png" alt="Next.js" />
+
+      <!-- Duplicate for smooth loop -->
+      <img src="html.jpg" alt="HTML" />
+      <img src="css.jpg" alt="CSS" />
+      <img src="tailwind.png" alt="Tailwind" />
+      <img src="javas.jpg" alt="JavaScript" />
+      <img src="react.jpg" alt="React" />
+      <img src="next.png" alt="Next.js" />
+    </div>
+  </div>
+  </main>
+
+  <footer>
+    <section id="contact" style=" background-color: #111; color: white; text-align: center;">
+  <h2 style="color: aqua;">Contact Me</h2>
+  <p>You can reach out to me anytime via the following platforms:</p>
+
+  <div style="margin-top: 20px; display: flex; justify-content: center; gap: 30px; font-size: 20px;">
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/anant-anand-975247193" target="_blank" style="color: white; text-decoration: none;">
+      🔗 LinkedIn
+    </a>
+
+    <!-- Email -->
+    <a href="mailto:anantanand900@gmail.com" style="color: white; text-decoration: none;">
+      📧 Email
+    </a>
+
+    <!-- GitHub -->
+    <a href="https://github.com/Anant5555-AI" target="_blank" style="color: white; text-decoration: none;">
+      💻 GitHub
+    </a>
+  </div>
+</section>
+  </footer>
+
+  <script>
+  const phrases = ["web developer", "gym enthusiast"];
+  let index = 0;
+  const textSpan = document.querySelector(".text");
+
+  setInterval(() => {
+    index = (index + 1) % phrases.length;
+    textSpan.textContent = phrases[index];
+  }, 3000); // switches every 2 seconds
+</script>
+</body>
+</html>
